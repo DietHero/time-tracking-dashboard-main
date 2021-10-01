@@ -1,0 +1,267 @@
+body {
+    color: white;
+    background-color: hsl(226, 43%, 10%);
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    overflow-x: hidden;
+}
+
+.container  { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+}
+
+.cards__container {
+    display: block
+}
+
+.activities__container {
+    display: block;
+}
+
+/*ABOUT*/
+.about__container {
+    background-color: hsl(235, 46%, 20%) ;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    margin: 20px;
+}
+.about__main--container {
+    flex-basis: 70%;
+    background-color: hsl(235, 45%, 61%);
+    border-radius: 1rem;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about__time--container {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about__button {
+    border: none;
+    color:hsl(236, 100%, 87%);
+    background-color: hsl(235, 46%, 20%);
+    margin:  0.5rem 1.5rem;
+    cursor: pointer;
+}
+.about__button--weekly:hover {
+    color: white;
+}
+.about__button--monthly:hover {
+    color: white;
+}
+.about__button--daily:hover {
+    color: white;
+}
+.about__avatar--container {
+    width: 50px;
+    height: 50px;
+    margin-left: 2rem;
+    margin-right: 0;
+    border: 2px solid white;
+    border-radius: 2rem;
+}
+.about__avatar {
+    background-image: url(../images/image-jeremy.png);
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+  
+    
+}
+.about__header {
+    margin: 1rem;
+    flex-basis: 60%;
+}
+.about__header--name {
+    font-size: 32px;
+    font-weight: 300;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.about__header--report {
+    font-size: 12px;
+    font-weight: 300;
+    margin-block-end: 0
+}
+
+@media (min-width: 1440px) {
+    .cards__container {
+        display: flex;
+        width: 900px;
+        position:absolute;
+        top: 50%; 
+        transform: translate(0, +30%);
+        margin: 10px;
+    }
+    
+    .about__container {
+        flex-basis: 30%;
+        width: 200px;
+        margin: 10px;
+    }
+    
+    .activities__container {
+        flex-basis: 70%;
+        display: flex;
+        flex-wrap: wrap;
+      
+    }
+    .about__time--container {
+        display: block;
+    }
+    .about__main--container {
+        display: block;
+    }
+    .about__header {
+        margin: 3rem 1.5rem;
+    }
+    .about__avatar--container {
+        margin: 1.5rem;
+    
+    }
+    .about__header--name {
+        font-size: 42px;
+    }
+    .about__avatar--container {
+        margin:  2rem 1.5rem;
+    }
+}
+/*CARD*/
+
+
+.card {
+    margin: 20px;
+    height: 150px;
+}
+.card__body {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.card__extra {
+    display: flex;
+    flex-direction:column-reverse;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.card__background {
+    height: 80%;
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 1rem;
+}
+.card__background:hover {
+background-color: hsl(235, 45%, 61%)
+;}
+.card__header {
+    margin: 1rem;
+    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+.card__title {
+    font-size: 14px;
+    font-weight: 500;
+}
+.card__button {
+    border: none;
+    background-color:transparent;
+    color: white;
+}
+.card__time {
+  margin:0 1rem ;  
+}
+
+.card__time--title {
+    font-size: 32px;
+    font-weight: 300;
+    margin-block-end: 0;
+    margin-block-start: 0
+}
+.card__previous {
+    font-weight: 300;
+    font-size: 12px;
+    margin:  0 1rem;
+    padding-top: 1rem;
+    padding-left: 6rem;
+
+}
+@media (min-width: 1440px) {
+   .card{ flex-basis: 30%;
+    width: 200px;
+    height: 200px;
+    margin: 0;
+    padding: 10px;
+   } 
+   .card__body {
+    display: block;
+}
+.card__title {
+    font-size: 12px;
+}
+.card__time--title {
+    font-size: 42px;
+}
+.card__previous {
+    padding-top: 0;
+    padding-left: 0;
+    
+}
+  
+}
+/*EXTRA*/
+.work__extra  {
+    background-color: hsl(15, 100%, 70%);
+}
+.play__extra {
+background-color: hsl(195, 74%, 62%);
+}
+.study__extra{
+background-color: hsl(348, 100%, 68%);
+}
+.exercise__extra {
+background-color: hsl(145, 58%, 55%);
+}
+.social__extra {
+background-color: hsl(264, 64%, 52%);
+}
+.self-care__extra {
+ background-color: hsl(43, 84%, 65%);
+}
+/* WEEK MONTH */
+.card__daily {
+    visibility: visible;
+      position: absolute;
+
+}
+
+ .card__weekly {
+    visibility: hidden;
+    position: absolute;
+    
+    
+}
+.card__monthly {
+    visibility: hidden;
+    position: absolute;
+   
+}
+
+
