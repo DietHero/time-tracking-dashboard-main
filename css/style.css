@@ -156,15 +156,29 @@ body {
 
 .card__extra {
     display: flex;
-    flex-direction:column-reverse;
+    flex-direction:column;
     height: 100%;
     border-radius: 1rem;
+    z-index: -1;
 }
+.card__image--container {
+    height:  40px;
+    display: flex;
+    z-index: 1;
+    position: relative;    
 
+}
+.card__image {
+    position:absolute;
+    top: 0px;
+  right: 16px;
+
+}
 .card__background {
-    height: 80%;
+    height:80%;
     background-color: hsl(235, 46%, 20%);
     border-radius: 1rem;
+    z-index: 2;
 }
 .card__background:hover {
 background-color: hsl(235, 45%, 61%)
@@ -249,19 +263,15 @@ background-color: hsl(264, 64%, 52%);
 .card__daily {
     visibility: visible;
       position: absolute;
-
 }
 
  .card__weekly {
     visibility: hidden;
     position: absolute;
-    
-    
 }
 .card__monthly {
     visibility: hidden;
     position: absolute;
-   
 }
 
 
